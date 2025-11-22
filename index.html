@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Resume Builder</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@300;400;700&family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Phosphor Icons for UI elements -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <style>
+      @media print {
+        @page {
+          margin: 0;
+          size: auto;
+        }
+        
+        body, html {
+          background-color: white !important;
+          height: 100% !important;
+          width: 100% !important;
+          overflow: visible !important;
+          margin: 0 !important;
+          padding: 0 !important;
+        }
+
+        /* Hide all UI elements */
+        nav, .no-print, button, .editor-column, .mobile-nav {
+          display: none !important;
+        }
+        
+        /* Reset root and layout containers */
+        #root {
+          display: block !important;
+          width: 100% !important;
+          height: auto !important;
+          overflow: visible !important;
+        }
+        
+        /* Target the main layout container */
+        #root > div {
+            display: block !important;
+            height: auto !important;
+            overflow: visible !important;
+        }
+
+        /* Target the preview wrapper specifically */
+        #preview-wrapper {
+          display: block !important;
+          position: absolute !important;
+          top: 0 !important;
+          left: 0 !important;
+          width: 100% !important;
+          height: auto !important;
+          min-height: 100% !important;
+          margin: 0 !important;
+          padding: 0 !important;
+          overflow: visible !important;
+          background: white !important;
+          z-index: 9999;
+          border: none !important;
+        }
+        
+        /* The resume page itself */
+        #resume-preview {
+          display: block !important;
+          margin: 0 auto !important;
+          width: 210mm !important;
+          box-shadow: none !important;
+          transform: none !important; /* Disable scaling */
+          position: relative !important;
+          left: auto !important;
+          top: auto !important;
+        }
+
+        /* Ensure colors print correctly */
+        * {
+          -webkit-print-color-adjust: exact !important;
+          print-color-adjust: exact !important;
+        }
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-gray-900 text-gray-100 font-sans antialiased h-full">
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
