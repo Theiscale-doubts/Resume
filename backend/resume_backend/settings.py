@@ -25,10 +25,20 @@ SECRET_KEY = 'django-insecure-gn01fp=wr(u$b#a4(t$@_2uoi*vo5bh@rtzm)qz(p(lk%xmr*#
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = [
+    'magenta-mandrill-952057.hostingersite.com',
+    'theiscale.com',
+    'localhost',
+    '127.0.0.1',
+    'resume-maker-0xjq.onrender.com'
+]
 
-CORS_ALLOW_ALL_ORIGINS = True
-
+CORS_ALLOWED_ORIGINS = [
+    "https://magenta-mandrill-952057.hostingersite.com",
+    "https://theiscale.com",
+    "http://localhost:5173",
+    "http://localhost:3000",
+]
 
 # Application definition
 
