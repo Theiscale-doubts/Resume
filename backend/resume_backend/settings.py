@@ -30,7 +30,8 @@ ALLOWED_HOSTS = [
     'theiscale.com',
     'localhost',
     '127.0.0.1',
-    'resume-maker-0xjq.onrender.com'
+    'resume-maker-0xjq.onrender.com',
+    'ai-resume.theiscale.com'
 ]
 
 CORS_ALLOWED_ORIGINS = [
@@ -38,6 +39,7 @@ CORS_ALLOWED_ORIGINS = [
     "https://theiscale.com",
     "http://localhost:5173",
     "http://localhost:3000",
+    "https://ai-resume.theiscale.com",
 ]
 
 # Application definition
